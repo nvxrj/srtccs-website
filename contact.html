@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | SRTC</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P43JBZWY66"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P43JBZWY66');
+</script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0b0c10;
+      color: #c5c6c7;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .contact-container {
+      max-width: 800px;
+      margin: 100px auto;
+      padding: 40px;
+      background: rgba(31, 42, 51, 0.8);
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(69, 162, 158, 0.2);
+      transition: all 0.5s ease;
+    }
+
+    h1 {
+      text-align: center;
+      color: #45a29e;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      margin-top: 5px;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #1f2a33;
+      color: #c5c6c7;
+    }
+
+    input:focus, textarea:focus {
+      outline: 2px solid #45a29e;
+      box-shadow: 0 0 10px #45a29e80;
+    }
+
+    .glow-button {
+      margin-top: 30px;
+      padding: 15px;
+      background: #45a29e;
+      border: none;
+      color: #0b0c10;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      box-shadow: 0 0 15px #45a29e80;
+    }
+
+    .glow-button:hover {
+      background: #66fcf1;
+      box-shadow: 0 0 25px #45a29e;
+    }
+
+    .back-home {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      color: #66fcf1;
+      text-decoration: none;
+    }
+    .back-home:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-container">
+    <h1>Contact SRTC</h1>
+    <form action="https://formspree.io/f/xanjvlee" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit" class="glow-button">Send Message</button>
+    </form>
+
+    <a href="index.html" class="back-home">← Back to Home</a>
+  </div>
+
+</body>
+</html>
