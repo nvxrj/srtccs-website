@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SRTC - Experts in EOT Cranes, Shearing Machines, Slitting Machines, Cut to Length Machines, and Industrial Repair Services.">
+  <meta name="keywords" content="SRTC, EOT Cranes, Shearing Machine, Slitting Machine, Cut to Length Machine, Electric Hoist, Industrial Machinery">
+  <meta name="author" content="SRTC">
+  <title>SRTC | Precision Engineered Machinery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/a2f3e2b3b1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Loading Spinner -->
+  <div class="loader" id="loader"></div>
+
+  <!-- Header / Hero Section -->
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">
+  <img src="images/logo.png" alt="SRTC Logo" class="logo-img">
+  <span>SRTC</span>
+</div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#machines">Machines</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content">
+      <h1>Welcome to <span class="highlight">SRTC</span></h1>
+      <p class="typing-text">Precision in Every Move | Engineering That Lasts</p>
+      <a href="#contact" class="cta-button glow-btn pulse">Get in Touch</a>
+    </div>
+  </header>
+<div class="carousel-track" id="carouselTrack">
+  <a href="eot-crane.html" class="carousel-card">
+    <i class="fas fa-industry glow-icon"></i>
+    <p>EOT Cranes</p>
+  </a>
+  <a href="shearing-machine.html" class="carousel-card">
+    <i class="fas fa-cut glow-icon"></i>
+    <p>Shearing Machines</p>
+  </a>
+  <a href="slitting-machine.html" class="carousel-card">
+    <i class="fas fa-sliders-h glow-icon"></i>
+    <p>Slitting Machines</p>
+  </a>
+  <a href="cut-to-length.html" class="carousel-card">
+    <i class="fas fa-ruler-combined glow-icon"></i>
+    <p>Cut to Length</p>
+  </a>
+  <a href="electric-hoist.html" class="carousel-card">
+    <i class="fas fa-wrench glow-icon"></i>
+    <p>Electric Hoists</p>
+  </a>
+  <a href="machine-services.html" class="carousel-card">
+    <i class="fas fa-tools glow-icon"></i>
+    <p>Machine Services</p>
+  </a>
+</div>
+
+
+<script>
+  const track = document.getElementById('carouselTrack');
+  let index = 0;
+
+  function moveCarousel(direction) {
+    const cards = document.querySelectorAll('.carousel-card');
+    const cardWidth = cards[0].offsetWidth + 16; // 16px = gap
+    index = Math.max(0, Math.min(index + direction, cards.length - 2));
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+  }
+
+  // Auto-play every 4s
+  setInterval(() => {
+    const cards = document.querySelectorAll('.carousel-card');
+    index = (index + 1) % (cards.length - 1);
+    moveCarousel(1);
+  }, 4000);
+</script>
+
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="content-card">
+      <h2>About SRTC</h2>
+      <p>SRTC is a trusted name in industrial engineering, delivering precision-crafted machinery including EOT cranes, shearing machines, slitting machines, and automated cut-to-length systems. Our machines are designed to last and perform in the toughest conditions. We also offer expert maintenance and repair services.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <!-- Gallery Section -->
+<section class="gallery-section" id="gallery">
+  <h2 class="section-title">Our Work</h2>
+  <div class="gallery-grid">
+
+    <a href="images/machine1.jpg" class="gallery-item glightbox" data-title="Machine 1">
+      <img src="images/machine1.jpg" alt="Machine 1" />
+      <div class="caption">Machine 1</div>
+    </a>
+
+    <a href="images/machine2.jpg" class="gallery-item glightbox" data-title="Machine 2">
+      <img src="images/machine2.jpg" alt="Machine 2" />
+      <div class="caption">Machine 2</div>
+    </a>
+
+    <a href="images/machine3.jpg" class="gallery-item glightbox" data-title="Machine 3">
+      <img src="images/machine3.jpg" alt="Machine 3" />
+      <div class="caption">Machine 3</div>
+    </a>
+
+    <a href="images/machine4.jpg" class="gallery-item glightbox" data-title="Machine 4">
+      <img src="images/machine4.jpg" alt="Machine 4" />
+      <div class="caption">Machine 4</div>
+    </a>
+
+  </div>
+</section>
+
+<!-- Lightbox Scripts (Paste before </body>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({ selector: '.glightbox' });
+</script>
+
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+ <section class="contact-section">
+  <h2 class="section-title">Contact Us</h2>
+  <form class="contact-form">
+    <div id="confirmationMessage" class="confirmation hidden">
+  ✅ Message Sent Successfully!
+</div>
+
+    <form class="contact-form" action="https://formspree.io/f/xanjvlee" method="POST" id="contactForm">
+  <div class="form-group">
+    <input type="text" id="name" name="name" required>
+    <label for="name">Your Name</label>
+  </div>
+  <div class="form-group">
+    <input type="email" id="email" name="email" required>
+    <label for="email">Your Email</label>
+  </div>
+   <div>
+  <input type="tel" name="phone" placeholder="Your Phone Number" required pattern="[0-9]{10}" />
+  </div>
+  <div class="form-group">
+    <textarea id="message" name="message" rows="4" required></textarea>
+    <label for="message">Your Message</label>
+  </div>
+ 
+  <button type="submit" class="hero-btn glow">Send Message</button>
+</form>
+
+<!-- Animated confirmation message -->
+<div id="confirmationMessage" class="confirmation hidden">
+  ✅ Message Sent Successfully!
+</div>
+<div class="address-map-container">
+  <div class="address-box">
+    <h3>📍 Our Address</h3>
+    <p>
+      PLOT NO:15 ADARSH NAGAR, <br>
+      VALAP, Taloja, PANVEL, <br>
+      Maharashtra 410208
+    </p>
+
+    <p>📞 <a href="tel:+919082895673" class="phone-link">+91 90828 95673</a></p>
+    <p>📞 <a href="tel:+919702171919" class="phone-link">+91 97021 71919</a></p>
+
+    <a href="https://www.google.com/maps/dir//PLOT+NO:15+ADARSH+NAGAR+,+VALAP,+Taloja,+PANVEL,+Maharashtra+410208/@19.0631516,73.0474003,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be7e96c624f7a03:0x4019e29922a75571!2m2!1d73.129802!2d19.0631699?entry=ttu"
+       target="_blank" class="direction-button">🧭 Get Directions</a>
+  </div>
+
+  <div class="map-box">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.7195121191655!2d73.1276132751731!3d19.063152082135456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e96c624f7a03%3A0x4019e29922a75571!2sAdarsh%20Nagar%2C%20Valap%2C%20Taloja%2C%20Panvel%2C%20Maharashtra%20410208!5e0!3m2!1sen!2sin!4v1689502644293!5m2!1sen!2sin" 
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SRTC. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const confirmation = document.getElementById('confirmationMessage');
+
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      form.reset();
+      confirmation.classList.remove('hidden');
+      setTimeout(() => confirmation.classList.add('visible'), 100);
+      setTimeout(() => {
+        confirmation.classList.remove('visible');
+        setTimeout(() => confirmation.classList.add('hidden'), 500);
+      }, 5000);
+    } else {
+      alert("Something went wrong. Try again.");
+    }
+  })
+  .catch(() => {
+    alert("Network error. Please try again later.");
+  });
+});
+</script>
+</body>
+</html>
