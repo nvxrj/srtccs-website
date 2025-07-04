@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nvxrj.github.io/srtccs-website/sitemap.xml
